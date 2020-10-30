@@ -1,4 +1,4 @@
 class ReportSerializer < ActiveModel::Serializer
-  attributes :id, :note, :grade
+  attributes :id, :note, :grade, :niceCreateOn
   # has_one :inspection
 end
