@@ -9,5 +9,6 @@ Rails.application.routes.draw do
 
   post "/login", to: "users#login"
   get "/keep_logged_in", to: "users#keep_logged_in"
+  post "/users", to: "users#create"
 
 end
