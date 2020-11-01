@@ -8,7 +8,6 @@ class InspectionsController < ApplicationController
     end
 
     def create
-        # byebug
         @restaurant = Restaurant.find_by(id: params[:id])
         if !@restaurant
             @restaurant = Restaurant.create(restaurant_params)
