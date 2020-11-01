@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get "/keep_logged_in", to: "users#keep_logged_in"
   post "/users", to: "users#create"
 
+  post "/inspections", to: "inspections#create"
+
 end
