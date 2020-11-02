@@ -16,11 +16,15 @@ class InspectionsController < ApplicationController
         end
      
         @inspection = @user.inspections.create(inspection_params)
-        render json: @inspection
+        if @inspection.valid?
+            render json: @inspection
+        else
+            render json: {error: "please log in"}
+        end
     end
 
     def update
-        @inspection = Inspection.find_by(id: params[:id])
+        @inspection = @user.inspections.find_by(id: params[:id])
         @inspection.update(date: params[:date], time: params[:nicetime])
         render json: @inspection
     end
