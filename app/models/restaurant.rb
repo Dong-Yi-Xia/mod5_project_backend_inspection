@@ -1,3 +1,3 @@
 class Restaurant < ApplicationRecord
-    has_many :inspections
+    has_many :inspections, dependent: :destroy 
 end

@@ -1,6 +1,6 @@
 class InspectionsController < ApplicationController
     
-    before_action :authorized, only: [:create]
+    before_action :authorized, except: [:index]
 
     def index 
         @inspections = Inspection.all
@@ -17,6 +17,19 @@ class InspectionsController < ApplicationController
      
         @inspection = @user.inspections.create(inspection_params)
         render json: @inspection
+    end
+
+    def update
+        @inspection = Inspection.find_by(id: params[:id])
+        @inspection.update(date: params[:date], time: params[:nicetime])
+        render json: @inspection
+    end
+
+    def destroy
+        # byebug
+        @inspection = Inspection.find_by(id: params[:id])
+        @inspection.destroy
+        render json: {message: "been deleted"}
     end
 
 

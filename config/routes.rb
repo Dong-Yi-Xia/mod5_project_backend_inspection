@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   post "/users", to: "users#create"
 
   post "/inspections", to: "inspections#create"
+  patch "/inspections", to: "inspections#update"
+  delete "/inspections", to: "inspections#destroy"
 
 end
