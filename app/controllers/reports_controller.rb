@@ -7,17 +7,31 @@ class ReportsController < ApplicationController
         render json: @reports
     end
 
+    def create
+        @report = Report.create(report_params)
+        render json: @report
+    end
+
     def update
-        # byebug
         @report = Report.find(params[:id])
         @report.update(report_params)
         render json: @report
     end
     
+    def destroy
+        @report = Report.find(params[:id])
+        @report.destroy
+        render json: @report
+    end
+
+
+
+
+
     private
 
     def report_params
-        params.permit(:id, :grade, :note)
+        params.permit(:id, :grade, :note, :inspection_id)
     end
 
 end
