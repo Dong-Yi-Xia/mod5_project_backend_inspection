@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   patch "/inspections", to: "inspections#update"
   delete "/inspections", to: "inspections#destroy"
 
+  patch "/reports", to: "reports#update"
+
 end
