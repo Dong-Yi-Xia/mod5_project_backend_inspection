@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   post "/login", to: "users#login"
   get "/keep_logged_in", to: "users#keep_logged_in"
   post "/users", to: "users#create"
+  get "/users/inspections", to: "users#usersInspections"
+
 
   post "/inspections", to: "inspections#create"
   patch "/inspections", to: "inspections#update"
