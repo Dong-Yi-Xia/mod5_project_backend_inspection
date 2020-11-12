@@ -2,10 +2,10 @@ class InspectionsController < ApplicationController
     
     before_action :authorized, except: [:index]
 
-    def index 
-        @inspections = Inspection.all
-        render json: @inspections
-    end
+    # def index 
+    #     @inspections = Inspection.all
+    #     render json: @inspections
+    # end
 
     def create
         @restaurant = Restaurant.find_by(id: params[:id])

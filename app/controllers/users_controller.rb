@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
     before_action :authorized, only: [:keep_logged_in]
 
-    def index 
-        @users = User.all
-        render json: @users
-    end
+    # def index 
+    #     @users = User.all
+    #     render json: @users
+    # end
 
 
     def login

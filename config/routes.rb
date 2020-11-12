@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  get "/users", to: "users#index"
-  get "/inspections", to: "inspections#index"
-  get "/restaurants", to: "restaurants#index"
-  get "/reports", to: "reports#index"
+  # get "/users", to: "users#index"
+  # get "/inspections", to: "inspections#index"
+  # get "/restaurants", to: "restaurants#index"
+  # get "/reports", to: "reports#index"
 
 
 

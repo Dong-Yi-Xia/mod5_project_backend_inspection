@@ -2,10 +2,10 @@ class ReportsController < ApplicationController
 
     before_action :authorized, except: [:index]
 
-    def index 
-        @reports = Report.all
-        render json: @reports
-    end
+    # def index 
+    #     @reports = Report.all
+    #     render json: @reports
+    # end
 
     def create
         @report = Report.create(report_params)
